@@ -1,0 +1,46 @@
+<p >
+name: {{this.userobj.name}}, email: {{this.userobj.email}}, dateOfBirth: {{this.userobj.dateOfBirth}}, contactNumber {{this.userobj.contactNumber}}
+</p>
+<input     type="button" value="DELETE CANDIDAT" class="btn btn-primary" (click)="DeleteCandidat()">
+
+<p>Available Skills</p>
+<table      class="table table-striped"  >
+
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Skill Name</th>
+      <th scope="col">ADD SKILL</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let pom of this.availableSkills"   >
+      <td >{{pom.id}}</td>
+     <td >{{pom.skillName}}</td>
+
+       <input     type="button" value="ADD SKILL" class="btn btn-primary" (click)="AddSkil(pom)">
+ </tbody>
+</table>
+
+<p>My Skills</p>
+<table      class="table table-striped"  >
+
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Skill Name</th>
+      <th scope="col">DELETE SKILL</th>
+  </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let pom of this.myskills"   >
+      <td >{{pom.id}}</td>
+     <td >{{pom.skillName}}</td>
+     <input     type="button" value="DELETE SKILL" class="btn btn-primary" (click)="DeleteSkil(pom)">
+
+
+
+
+
+  </tbody>
+</table>
